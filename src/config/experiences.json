@@ -1,0 +1,35 @@
+[
+  {
+    "type": "experience",
+    "title": "pages.home.experience.items.mynet.title",
+    "company": "MyNet",
+    "location": "pages.home.experience.items.mynet.location",
+    "startDate": "2024-11-01",
+    "endDate": null,
+    "description": null,
+    "icon": "mdi-briefcase",
+    "color": "secondary"
+  },
+  {
+    "type": "experience",
+    "title": "pages.home.experience.items.alten.title",
+    "company": "ALTEN",
+    "location": "pages.home.experience.items.alten.location",
+    "startDate": "2024-11-01",
+    "endDate": "2025-11-30",
+    "description": null,
+    "icon": "mdi-briefcase",
+    "color": "secondary"
+  },
+  {
+    "type": "experience",
+    "title": "pages.home.experience.items.wecove.title",
+    "company": "Wecove srl",
+    "location": "pages.home.experience.items.wecove.location",
+    "startDate": "2022-07-01",
+    "endDate": "2024-10-31",
+    "description": null,
+    "icon": "mdi-briefcase",
+    "color": "secondary"
+  }
+]

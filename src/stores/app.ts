@@ -1,24 +1,29 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useAppStore = defineStore('app', {
     state: () => ({
         theme: localStorage.getItem('theme') || 'dark',
-        language: localStorage.getItem('language') || 'en'
+        language: localStorage.getItem('language') || 'en',
+        isToShrink: false,
     }),
     actions: {
+        setIsToShrink(isToShrink: boolean) {
+            this.isToShrink = isToShrink;
+        },
         setTheme(theme: string) {
-            this.theme = theme
-            localStorage.setItem('theme', theme)
+            this.theme = theme;
+
+            localStorage.setItem('theme', theme);
         },
         setLanguage(language: string) {
-            this.language = language
+            this.language = language;
 
-            localStorage.setItem('language', language)
+            localStorage.setItem('language', language);
         },
         toggleTheme() {
-            const nextTheme = this.theme === 'dark' ? 'light' : 'dark'
+            const nextTheme = this.theme === 'dark' ? 'light' : 'dark';
 
-            this.setTheme(nextTheme)
+            this.setTheme(nextTheme);
         }
     }
-})
+});

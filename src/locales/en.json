@@ -3,14 +3,71 @@
         "home": "Home",
         "projects": "Projects"
     },
+    "global": {
+        "role": "Software Developer",
+        "im_a": "I'm a",
+        "developer": "Developer",
+        "social": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "instagram": "Instagram"
+        }
+    },
     "pages": {
         "projects": {
             "title": "Projects",
-            "description": "This is a list of projects I've worked on."
+            "description": "This is a list of projects I've worked on.",
+            "project": "Project",
+            "placeholder_description": "This is a placeholder for project description.",
+            "learn_more": "Learn More"
         },
         "home": {
             "title": "Welcome to my portfolio",
-            "description": "This is my personal portfolio website."
+            "description": "This is my personal portfolio website.",
+            "present": "Present",
+            "intro": {
+                "typing": {
+                    "backend": "Backend",
+                    "frontend": "Frontend"
+                },
+                "bio": "Passionate about software development. I take pleasure in developing modern and innovative web applications.",
+                "view_projects": "View Projects",
+                "skills_summary": "Core Tech Stack"
+            },
+            "experience": {
+                "title": "Professional Journey",
+                "subtitle": "My professional path and education",
+                "duration": {
+                    "years": "{count} yr | {count} yrs",
+                    "months": "{count} mo | {count} mos"
+                },
+                "items": {
+                    "mynet": {
+                        "title": "Software Developer",
+                        "location": "Udine, Italy"
+                    },
+                    "alten": {
+                        "title": "Software Developer",
+                        "location": "Udine, Italy"
+                    },
+                    "wecove": {
+                        "title": "Software Developer",
+                        "location": "Porcia, Italy"
+                    }
+                }
+            },
+            "skills": {
+                "backend": {
+                    "title": "Backend Development",
+                    "languages": "Languages I know",
+                    "tools": "Tools I use"
+                },
+                "frontend": {
+                    "title": "Frontend Development",
+                    "languages": "Languages I know",
+                    "tools": "Tools I use"
+                }
+            }
         }
     }
 }

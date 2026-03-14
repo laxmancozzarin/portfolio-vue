@@ -3,14 +3,71 @@
         "home": "Home",
         "projects": "Progetti"
     },
+    "global": {
+        "role": "Sviluppatore Software",
+        "im_a": "Sono un",
+        "developer": "Developer",
+        "social": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "instagram": "Instagram"
+        }
+    },
     "pages": {
         "projects": {
             "title": "Progetti",
-            "description": "Questa è una lista dei progetti su cui ho lavorato."
+            "description": "Questa è una lista dei progetti su cui ho lavorato.",
+            "project": "Progetto",
+            "placeholder_description": "Questo è un segnaposto per la descrizione del progetto.",
+            "learn_more": "Scopri di più"
         },
         "home": {
             "title": "Benvenuto nel mio portfolio",
-            "description": "Questo è il mio sito web personale di portfolio."
+            "description": "Questo è il mio sito web personale di portfolio.",
+            "present": "Oggi",
+            "intro": {
+                "typing": {
+                    "backend": "Backend",
+                    "frontend": "Frontend"
+                },
+                "bio": "Appassionato di sviluppo software. Mi diverto a sviluppare applicazioni web moderne ed innovative.",
+                "view_projects": "Vedi Progetti",
+                "skills_summary": "Stack Tecnologico"
+            },
+            "experience": {
+                "title": "Percorso Professionale",
+                "subtitle": "La mia carriera e istruzione",
+                "duration": {
+                    "years": "{count} anno | {count} anni",
+                    "months": "{count} mese | {count} mesi"
+                },
+                "items": {
+                    "mynet": {
+                        "title": "Sviluppatore Software",
+                        "location": "Udine, Italia"
+                    },
+                    "alten": {
+                        "title": "Sviluppatore Software",
+                        "location": "Udine, Italia"
+                    },
+                    "wecove": {
+                        "title": "Sviluppatore Software",
+                        "location": "Porcia, Italia"
+                    }
+                }
+            },
+            "skills": {
+                "backend": {
+                    "title": "Sviluppo Backend",
+                    "languages": "Linguaggi che conosco",
+                    "tools": "Strumenti che uso"
+                },
+                "frontend": {
+                    "title": "Sviluppo Frontend",
+                    "languages": "Linguaggi che conosco",
+                    "tools": "Strumenti che uso"
+                }
+            }
         }
     }
 }
