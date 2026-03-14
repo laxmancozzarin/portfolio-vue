@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects"
+    },
+    "pages": {
+        "projects": {
+            "title": "Projects",
+            "description": "This is a list of projects I've worked on."
+        },
+        "home": {
+            "title": "Welcome to my portfolio",
+            "description": "This is my personal portfolio website."
+        }
+    }
+}
