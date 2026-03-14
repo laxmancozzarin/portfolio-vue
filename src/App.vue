@@ -1,99 +1,108 @@
 <script lang="ts">
+import { useTheme } from 'vuetify'
+import { useAppStore } from './stores/app'
+import { watch, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     name: 'App',
-    methods: {
-        changeLanguage(lang: string) {
-            this.$i18n.locale = lang
+    setup() {
+        const theme = useTheme()
+        const appStore = useAppStore()
+        const { t, locale } = useI18n()
+
+        watch(() => appStore.theme, (newTheme) => {
+            theme.global.name.value = newTheme
+        }, { immediate: true })
+
+        watch(() => appStore.language, (newLang) => {
+            locale.value = newLang as any
+        }, { immediate: true })
+
+        const isDark = computed(() => appStore.theme === 'dark')
+
+        const toggleTheme = () => appStore.toggleTheme()
+        const changeLanguage = (lang: string) => appStore.setLanguage(lang)
+
+        return {
+            appStore,
+            isDark,
+            toggleTheme,
+            changeLanguage,
+            t
         }
     }
 }
 </script>
 
 <template>
-    <header>
-        <div class="wrapper">
-            <div class="language-switcher">
-                <button @click="changeLanguage('en')">EN</button>
-                <button @click="changeLanguage('it')">IT</button>
-            </div>
+    <v-app>
+        <v-app-bar :elevation="0" rounded>
+            <v-app-bar-title>
+                <strong>
+                    Laxman Cozzarin
+                </strong>
+                <strong class="text-info">
+                    Portfolio
+                </strong>
+            </v-app-bar-title>
 
-            <nav>
-                <RouterLink to="/">{{ $t('nav.home') }}</RouterLink>
-                <RouterLink to="/projects">{{ $t('nav.projects') }}</RouterLink>
-            </nav>
-        </div>
-    </header>
+            <v-spacer></v-spacer>
 
-    <main>
-        <RouterView />
-    </main>
+            <v-btn
+                to="/"
+                variant="text"
+                class="hidden-sm-and-down"
+            >
+                <span>{{ t('nav.home') }}</span>
+            </v-btn>
+            <v-btn
+                to="/projects"
+                variant="text"
+                class="hidden-sm-and-down"
+            >
+                <span>{{ t('nav.projects') }}</span>
+            </v-btn>
+
+            <v-divider vertical class="mx-2"></v-divider>
+
+            <v-menu>
+                <template v-slot:activator="{ props }">
+                    <v-btn icon="mdi-translate" v-bind="props"></v-btn>
+                </template>
+                <v-list>
+                    <v-list-item
+                        @click="changeLanguage('en')"
+                        :active="appStore.language === 'en'"
+                    >
+                        <v-list-item-title>English</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item
+                        @click="changeLanguage('it')"
+                        :active="appStore.language === 'it'"
+                    >
+                        <v-list-item-title>Italiano</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
+
+            <v-btn
+                :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+                @click="toggleTheme"
+            >
+            </v-btn>
+        </v-app-bar>
+
+        <v-main>
+            <v-container>
+                <RouterView />
+            </v-container>
+        </v-main>
+
+        <v-footer app border padless>
+            <v-col class="text-center w-100" cols="12">
+                {{ new Date().getFullYear() }} — <strong>Portfolio</strong>
+            </v-col>
+        </v-footer>
+    </v-app>
 </template>
-
-<style lang="scss" scoped>
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-.language-switcher {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1rem;
-    button {
-        padding: 5px 10px;
-        cursor: pointer;
-        border: 1px solid #42b983;
-        background: transparent;
-        color: #42b983;
-        &:hover {
-            background: #42b983;
-            color: white;
-        }
-    }
-}
-
-nav {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2rem;
-
-    a.router-link-exact-active {
-        color: var(--color-text);
-        &:hover {
-            background-color: transparent;
-        }
-    }
-
-    a {
-        display: inline-block;
-        padding: 0 1rem;
-        border-left: 1px solid var(--color-border);
-        &:first-of-type {
-            border: 0;
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    .logo {
-        margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    nav {
-        text-align: left;
-        margin-left: -1rem;
-        font-size: 1rem;
-
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
-}
-</style>

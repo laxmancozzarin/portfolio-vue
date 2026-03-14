@@ -10,7 +10,5 @@ export default {
 </script>
 
 <template>
-    <main>
-        <Home />
-    </main>
+    <Home />
 </template>
