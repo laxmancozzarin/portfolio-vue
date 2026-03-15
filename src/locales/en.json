@@ -16,30 +16,30 @@
     "pages": {
         "projects": {
             "title": "Projects",
-            "description": "This is a list of projects I've worked on.",
+            "description": "A curated showcase of my professional work and personal projects.",
             "project": "Project",
-            "placeholder_description": "This is a placeholder for project description.",
+            "placeholder_description": "Detailed project description coming soon.",
             "learn_more": "Learn More"
         },
         "home": {
-            "title": "Welcome to my portfolio",
-            "description": "This is my personal portfolio website.",
+            "title": "Innovative Software Engineering",
+            "description": "Showcasing my professional journey, technical expertise, and the digital experiences I've brought to life.",
             "present": "Present",
             "intro": {
                 "typing": {
                     "backend": "Backend",
                     "frontend": "Frontend"
                 },
-                "bio": "Passionate about software development. I take pleasure in developing modern and innovative web applications.",
+                "bio": "Highly motivated Software Developer specialized in building robust, scalable, and high-performance web applications. I combine technical precision with a passion for crafting innovative and intuitive user experiences.",
                 "view_projects": "View Projects",
                 "skills_summary": "Core Tech Stack"
             },
             "experience": {
                 "title": "Professional Journey",
-                "subtitle": "My professional path and education",
+                "subtitle": "A comprehensive timeline of my professional growth and academic foundations",
                 "duration": {
-                    "years": "{count} yr | {count} yrs",
-                    "months": "{count} mo | {count} mos"
+                    "years": "{count} year | {count} years",
+                    "months": "{count} month | {count} months"
                 },
                 "items": {
                     "mynet": {
@@ -58,14 +58,14 @@
             },
             "skills": {
                 "backend": {
-                    "title": "Backend Development",
-                    "languages": "Languages I know",
-                    "tools": "Tools I use"
+                    "title": "Backend Developer",
+                    "languages": "Tech Stack",
+                    "tools": "Ecosystem & Tools"
                 },
                 "frontend": {
-                    "title": "Frontend Development",
-                    "languages": "Languages I know",
-                    "tools": "Tools I use"
+                    "title": "Frontend Developer",
+                    "languages": "Tech Stack",
+                    "tools": "Frameworks & Tools"
                 }
             }
         }

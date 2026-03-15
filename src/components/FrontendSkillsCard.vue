@@ -6,10 +6,10 @@ const { t } = useI18n();
 
 const languages = ['Vue.js', 'React', 'TypeScript', 'SCSS', 'CSS', 'Bootstrap', 'Tailwind CSS'];
 const tools = [
-    { name: 'IntelliJ IDEA', image: 'https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png' },
-    { name: 'Visual Studio Code', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg' },
-    { name: 'Figma', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg' },
-    { name: 'Git', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' }
+    { name: 'IntelliJ IDEA', image: '/icons/intellij-idea_logo_300x300.png' },
+    { name: 'Visual Studio Code', image: '/icons/vscode-original.svg' },
+    { name: 'Figma', image: '/icons/figma-original.svg' },
+    { name: 'Git', image: '/icons/git-original.svg' }
 ];
 </script>
 
@@ -22,6 +22,3 @@ const tools = [
         :tools="tools"
     />
 </template>
-
-<style scoped>
-</style>

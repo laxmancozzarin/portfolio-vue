@@ -45,25 +45,46 @@ const vuetify = createVuetify({
         themes: {
             light: {
                 colors: {
-                    primary: '#000000',
-                    secondary: '#96d6ff',
+                    primary: '#3F51B5',
+                    secondary: '#FF9800',
+                    accent: '#607D8B',
+                    background: '#F9F9F9',
+                    surface: '#FFFFFF',
+                    error: '#D32F2F',
+                    info: '#1976D2',
+                    success: '#388E3C',
+                    warning: '#FBC02D',
+                    'on-background': '#424242',
+                    'on-surface': '#424242',
+                    'on-primary': '#FFFFFF',
+                    'on-secondary': '#FFFFFF',
                 },
             },
             dark: {
                 colors: {
-                    primary: '#ffffff',
-                    secondary: '#8d8cff',
+                    primary: '#7986CB',
+                    secondary: '#FFB74D',
+                    accent: '#B0BEC5',
+                    background: '#212121',
+                    surface: '#333333',
+                    error: '#EF5350',
+                    info: '#64B5F6',
+                    success: '#81C784',
+                    warning: '#FFEB3B',
+                    'on-background': '#E0E0E0',
+                    'on-surface': '#E0E0E0',
+                    'on-primary': '#212121',
+                    'on-secondary': '#212121',
                 },
             },
         },
     },
     defaults: {
         elevation: 0,
-
         VCard: {
             elevation: 0,
-            rounded: 'lg',
-            class: 'pa-4 border',
+            rounded: 'xl',
+            class: 'pa-6 border',
         },
         VCardTitle: {
             class: 'text-h2 font-weight-bold',

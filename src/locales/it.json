@@ -4,7 +4,7 @@
         "projects": "Progetti"
     },
     "global": {
-        "role": "Sviluppatore Software",
+        "role": "Software Developer",
         "im_a": "Sono un",
         "developer": "Developer",
         "social": {
@@ -16,56 +16,55 @@
     "pages": {
         "projects": {
             "title": "Progetti",
-            "description": "Questa è una lista dei progetti su cui ho lavorato.",
+            "description": "Una selezione curata dei miei lavori professionali e progetti personali.",
             "project": "Progetto",
-            "placeholder_description": "Questo è un segnaposto per la descrizione del progetto.",
+            "placeholder_description": "Descrizione dettagliata del progetto in arrivo.",
             "learn_more": "Scopri di più"
         },
         "home": {
-            "title": "Benvenuto nel mio portfolio",
-            "description": "Questo è il mio sito web personale di portfolio.",
-            "present": "Oggi",
+            "description": "Esplora il mio percorso professionale, le mie competenze tecniche e le esperienze digitali che ho realizzato.",
+            "present": "Presente",
             "intro": {
                 "typing": {
                     "backend": "Backend",
                     "frontend": "Frontend"
                 },
-                "bio": "Appassionato di sviluppo software. Mi diverto a sviluppare applicazioni web moderne ed innovative.",
+                "bio": "Software Developer altamente motivato, specializzato nello sviluppo di applicazioni web robuste, scalabili e ad alte prestazioni. Unisco precisione tecnica alla passione per la creazione di esperienze utente innovative e intuitive.",
                 "view_projects": "Vedi Progetti",
-                "skills_summary": "Stack Tecnologico"
+                "skills_summary": "Principali Tecnologie"
             },
             "experience": {
                 "title": "Percorso Professionale",
-                "subtitle": "La mia carriera e istruzione",
+                "subtitle": "Una cronologia completa della mia crescita professionale e delle mie basi accademiche",
                 "duration": {
                     "years": "{count} anno | {count} anni",
                     "months": "{count} mese | {count} mesi"
                 },
                 "items": {
                     "mynet": {
-                        "title": "Sviluppatore Software",
+                        "title": "Software Developer",
                         "location": "Udine, Italia"
                     },
                     "alten": {
-                        "title": "Sviluppatore Software",
+                        "title": "Software Developer",
                         "location": "Udine, Italia"
                     },
                     "wecove": {
-                        "title": "Sviluppatore Software",
+                        "title": "Software Developer",
                         "location": "Porcia, Italia"
                     }
                 }
             },
             "skills": {
                 "backend": {
-                    "title": "Sviluppo Backend",
-                    "languages": "Linguaggi che conosco",
-                    "tools": "Strumenti che uso"
+                    "title": "Backend Developer",
+                    "languages": "Tecnologie",
+                    "tools": "Ecosistema e Strumenti"
                 },
                 "frontend": {
-                    "title": "Sviluppo Frontend",
-                    "languages": "Linguaggi che conosco",
-                    "tools": "Strumenti che uso"
+                    "title": "Frontend Developer",
+                    "languages": "Tecnologie",
+                    "tools": "Framework e Strumenti"
                 }
             }
         }

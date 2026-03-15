@@ -1,11 +1,10 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import moment from 'moment';
 import { useAppStore } from '@/stores/app';
 import rawExperiences from '@/config/experiences.json';
 
-export default defineComponent({
+export default {
     name: 'ExperienceTimelineCard',
     setup() {
         const { t, locale } = useI18n();
@@ -55,77 +54,86 @@ export default defineComponent({
             const start = this.getMoment(startDate).format('MMM YYYY');
             const end = endDate
                 ? this.getMoment(endDate).format('MMM YYYY')
-                : this.t('pages.home.present');
+                : this.t('pages.home.present')
+            ;
             const duration = this.calculateDuration(startDate, endDate);
 
             return `${start} - ${end} · ${duration}`;
         }
     }
-});
+};
 </script>
 
 <template>
-    <v-card>
+    <v-card class="glow-card">
         <template v-slot:title>
             {{ t('pages.home.experience.title') }}
         </template>
-        <template v-slot:subtitle>
-            {{ t('pages.home.experience.subtitle') }}
-        </template>
         <template v-slot:text>
+            <div class="text-subtitle-2 font-weight-bold mb-3 text-medium-emphasis">
+                {{ t('pages.home.experience.subtitle') }}
+            </div>
+
             <v-timeline
                 align="start"
                 side="end"
                 direction="vertical"
-                line-color="secondary"
+                line-color="primary"
                 :density="appStore.isToShrink ? 'compact' : 'comfortable'"
             >
                 <v-timeline-item
                     v-for="(item, index) in items"
                     :key="index"
-                    :dot-color="item.color"
+                    dot-color="primary"
                     :icon="item.icon"
+                    size="small"
                 >
-                    <v-card class="pa-4" color="background" style="width: 100%;">
-                        <template v-slot:title>
-                            <div class="text-label-medium text-uppercase mt-2 mb-3">
+                    <v-card
+                        class="pa-0 glow-card experience-item-card"
+                    >
+                        <div class="d-flex justify-space-between align-start flex-wrap ga-2">
+                            <div class="text-label-medium text-uppercase text-secondary font-weight-bold">
                                 {{ item.formattedDates }}
                             </div>
-
-                            <div class="text-title-large">
-                                {{ item.title }}
-                            </div>
-                        </template>
-                        <template v-slot:subtitle>
-                            <template v-if="item.type === 'experience'">
-                                {{ item.company }}
-                            </template>
-
-                            <template v-else-if="item.type === 'education'">
-                                {{ item.institution }}
-                            </template>
-
-                            <span
-                                v-if="item.location"
-                                class="text-subtitle-2 text-grey-darken-1 ml-2"
+                            <v-chip
+                                v-if="item.type === 'experience'"
+                                size="x-small"
+                                color="secondary"
+                                variant="tonal"
+                                class="font-weight-bold"
                             >
-                                ({{ item.location }})
-                            </span>
-                        </template>
-                        <template v-slot:text>
-                            <p v-if="item.type === 'education' && item.degree" class="text-subtitle-2 text-grey-darken-1 mb-1">
-                                {{ item.degree }} - {{ item.fieldOfStudy }}
-                            </p>
-                            <p v-if="item.description" class="text-body-2">
-                                {{ item.description }}
-                            </p>
-                        </template>
+                                {{ item.company }}
+                            </v-chip>
+                            <v-chip
+                                v-else-if="item.type === 'education'"
+                                size="x-small"
+                                color="primary"
+                                variant="tonal"
+                                class="font-weight-bold"
+                            >
+                                {{ item.institution }}
+                            </v-chip>
+                        </div>
+
+                        <div class="text-title-large font-weight-bold mb-1">
+                            {{ item.title }}
+                        </div>
+
+                        <div class="d-flex align-center text-subtitle-2 text-medium-emphasis mb-3">
+                            <v-icon icon="mdi-map-marker" size="14" class="ml-2 mr-1"></v-icon>
+                            <span>{{ item.location }}</span>
+                        </div>
+
+                        <div v-if="item.type === 'education' && item.degree" class="text-subtitle-2 text-grey-darken-1 mb-2">
+                            {{ item.degree }} • {{ item.fieldOfStudy }}
+                        </div>
+
+                        <p v-if="item.description" class="text-body-2 text-medium-emphasis line-height-relaxed">
+                            {{ item.description }}
+                        </p>
                     </v-card>
                 </v-timeline-item>
             </v-timeline>
         </template>
     </v-card>
 </template>
-
-<style lang="scss" scoped>
-</style>

@@ -120,4 +120,23 @@ const changeLanguage = (lang: string) => appStore.setLanguage(lang);
 .v-application {
     background-color: transparent !important;
 }
+
+.glow-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: visible !important;
+    backdrop-filter: blur(8px);
+    background: rgba(var(--v-theme-surface-rgb), 0.7) !important;
+}
+
+.glow-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 24px -10px rgba(var(--v-theme-primary-rgb), 0.4) !important;
+    border-color: rgba(var(--v-theme-primary-rgb), 0.3) !important;
+    z-index: 10;
+}
+
+.v-card.border {
+    border-color: rgba(var(--v-border-color), 0.12) !important;
+}
 </style>

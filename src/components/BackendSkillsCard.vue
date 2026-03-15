@@ -6,13 +6,13 @@ const { t } = useI18n();
 
 const languages = ['Symfony', 'Laravel', 'PHP', 'Postgres', 'Node.js'];
 const tools = [
-    { name: 'PhpStorm', image: 'https://resources.jetbrains.com/storage/products/phpstorm/img/meta/phpstorm_logo_300x300.png' },
-    { name: 'IntelliJ IDEA', image: 'https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png' },
-    { name: 'Visual Studio Code', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg' },
-    { name: 'DataGrip', image: 'https://resources.jetbrains.com/storage/products/datagrip/img/meta/datagrip_logo_300x300.png' },
-    { name: 'Git', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' },
-    { name: 'GitLab', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg' },
-    { name: 'CLI Terminal', image: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg' }
+    { name: 'PhpStorm', image: '/icons/phpstorm_logo_300x300.png' },
+    { name: 'IntelliJ IDEA', image: '/icons/intellij-idea_logo_300x300.png' },
+    { name: 'Visual Studio Code', image: '/icons/vscode-original.svg' },
+    { name: 'DataGrip', image: '/icons/datagrip_logo_300x300.png' },
+    { name: 'Git', image: '/icons/git-original.svg' },
+    { name: 'GitLab', image: '/icons/gitlab-original.svg' },
+    { name: 'CLI Terminal', image: '/icons/bash-original.svg' }
 ];
 </script>
 
@@ -25,6 +25,3 @@ const tools = [
         :tools="tools"
     />
 </template>
-
-<style scoped>
-</style>

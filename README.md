@@ -1,47 +1,54 @@
-# portfolio-vue
+# Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome! This is my personal portfolio website, designed and built using **Vue 3** and **Vuetify**. It serves as a showcase of my projects, technical skills, and professional experience.
 
-## Recommended IDE Setup
+## 🚀 Overview
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This project is a modern, responsive, and internationalized web application. It features a dark/light theme, multilingual support, and 3D graphics.
 
-## Recommended Browser Setup
+## 🛠️ Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Framework:** [Vue 3](https://vuejs.org/) (Composition API)
+- **UI Component Library:** [Vuetify](https://vuetifyjs.com/)
+- **Build Tool:** [Vite](https://vite.dev/)
+- **State Management:** [Pinia](https://pinia.vuejs.org/)
+- **Routing:** [Vue Router](https://router.vuejs.org/)
+- **Internationalization:** [Vue I18n](https://vue-i18n.intlify.dev/) (Supporting English and Italian)
+- **3D Graphics:** [Three.js](https://threejs.org/)
+- **Time/Date Handling:** [Moment.js](https://momentjs.com/)
+- **Icons:** [Material Design Icons (MDI)](https://materialdesignicons.com/)
 
-## Type Support for `.vue` Imports in TS
+## 🏗️ Project Structure
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+The project follows a standard Vue 3 + Vite structure:
+- `src/components/`: Reusable UI components.
+- `src/locales/`: Translation files (JSON) for English and Italian.
+- `src/router/`: Navigation and routing configuration.
+- `src/stores/`: Pinia stores for global state management (e.g., theme, language).
+- `src/App.vue`: Root component.
+- `src/main.ts`: Entry point where Vue is initialized with Vuetify, Pinia, Router, and I18n.
 
-## Customize configuration
+## 🛠️ Development Setup
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+### Install Dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Run for Development
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build for Production
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Linting & Formatting
 
 ```sh
 npm run lint

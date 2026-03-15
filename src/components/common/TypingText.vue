@@ -148,9 +148,7 @@ onUnmounted(() => {
         <span :class="['typing-display', textClass]">
             {{ currentText }}
         </span>
-        <span v-if="showCursor" :class="['cursor', cursorClass]">
-            |
-        </span>
+        <span v-if="showCursor" :class="['cursor-block', cursorClass]"></span>
     </span>
 </template>
 
@@ -166,16 +164,19 @@ onUnmounted(() => {
     display: inline;
 }
 
-.cursor {
+.cursor-block {
     display: inline-block;
-    margin-left: 2px;
-    vertical-align: top;
-    animation: blink-caret .75s step-end infinite;
-    color: orange;
+    width: 0.6em;
+    height: 1.1em;
+    background-color: rgb(var(--v-theme-primary));
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink-caret 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    opacity: 1;
 }
 
 @keyframes blink-caret {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 </style>
